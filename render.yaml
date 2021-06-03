@@ -9,7 +9,7 @@ services:
     disk:
       name: strapi-uploads
       mountPath: /opt/render/project/src/public/uploads
-      sizeGB: 1
+      sizeGB: 2
     envVars:
       - key: NODE_VERSION
         value: 12.18.4
