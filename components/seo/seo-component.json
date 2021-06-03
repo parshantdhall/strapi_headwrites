@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_seo_seo_components",
+  "info": {
+    "name": "SEO_Component",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 5,
+      "maxLength": 60
+    },
+    "Is_Follow_links": {
+      "type": "boolean",
+      "default": true
+    },
+    "Page_Description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

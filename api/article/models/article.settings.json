@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 6
+    },
+    "Body": {
+      "type": "richtext",
+      "required": true
+    },
+    "Featured_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "author": {
+      "model": "author",
+      "via": "articles"
+    },
+    "category": {
+      "model": "category",
+      "via": "articles"
+    },
+    "Is_guest_post": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "SEO_Component": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-component",
+      "required": true
+    },
+    "Slug": {
+      "type": "string",
+      "required": true
+    },
+    "is_custom_slug": {
+      "type": "boolean",
+      "default": false,
+      "private": true
+    },
+    "article_tags": {
+      "via": "articles",
+      "collection": "article-tags"
+    }
+  }
+}
