@@ -16,8 +16,8 @@
       "unique": true
     },
     "articles": {
-      "collection": "article",
       "via": "article_tags",
+      "collection": "article",
       "dominant": true
     }
   }

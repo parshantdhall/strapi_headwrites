@@ -59,8 +59,12 @@
       "private": true
     },
     "article_tags": {
-      "via": "articles",
-      "collection": "article-tags"
+      "collection": "article-tags",
+      "via": "articles"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

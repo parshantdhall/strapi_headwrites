@@ -21,7 +21,6 @@ const MediaLib = ({ isOpen, onChange, onToggle }) => {
   const handleInputChange = (data) => {
     if (data) {
       const { url } = data;
-
       setData({ ...data, url: prefixFileUrlWithBackendUrl(url) });
     }
   };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { Button } from "@buffetjs/core";
 import { Label, Description, ErrorMessage } from "@buffetjs/styles";
 import Editor from "../QuillEditor";
@@ -10,7 +10,10 @@ const Wysiwyg = ({ inputDescription, error, label, name, onChange, value }) => {
 
   const handleChange = (data) => {
     if (data.mime.includes("image")) {
-      const imgTag = `<p><img src="${data.url}" caption="${data.caption}" alt="${data.alternativeText}"></img></p>`;
+      console.log(data);
+      const imgTag = `<p><img src="${data.url}" caption="${
+        data.caption ? data.caption : " "
+      }" alt="${data.alternativeText ? data.alternativeText : " "}"></img></p>`;
       const newValue = value ? `${value}${imgTag}` : imgTag;
 
       onChange({ target: { name, value: newValue } });
