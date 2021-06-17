@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_medias",
+  "info": {
+    "name": "Social Media"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "social_media_platform": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "social_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
