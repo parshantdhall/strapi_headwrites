@@ -5,8 +5,8 @@ import "react-quill/dist/quill.snow.css";
 const Link = Quill.import("formats/link");
 class linkType extends Link {
   static create(value) {
-    // let node = super.create(value);
-    // value = this.sanitize(value);
+    let node = super.create(value);
+    value = this.sanitize(value);
     // if (Number(value) !== NaN) {
     //   node.setAttribute("href", "tel:" + value);
     //   node.className = "link--tel";
